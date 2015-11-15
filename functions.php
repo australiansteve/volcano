@@ -103,8 +103,12 @@ add_action( 'widgets_init', 'volcano_widgets_init' );
 if ( !function_exists( 'volcano_styles' ) ) :
 
 	function volcano_styles() {
-		// Enqueue our stylesheet
+		// Enqueue our stylesheets
+
 		wp_enqueue_style( 'volcano_styles', get_stylesheet_directory_uri() . '/assets/dist/css/app.css', '', '1.1.0' );
+		wp_enqueue_style( 'fontawesome_styles', get_stylesheet_directory_uri() . '/assets/dist/css/font-awesome.css', '', '9' );
+		wp_enqueue_style( 'home_styles', get_stylesheet_directory_uri() . '/style.css', '', '9' );
+
 	}
 
 add_action( 'wp_enqueue_scripts', 'volcano_styles' );

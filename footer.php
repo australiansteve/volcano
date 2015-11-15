@@ -17,7 +17,7 @@
 			<div class="small-12 columns"><!-- .columns start -->
 
 				<div class="site-info">
-					<p>This is the footer</p>
+					<p><i class="fa fa-copyright"></i> <?php echo date("Y");?> Copyright <?php bloginfo( 'name' ); ?></p>
 				</div><!-- .site-info -->
 
 			</div><!-- .columns end -->

@@ -1,17 +1,19 @@
 {
   "name": "volcano",
-  "version": "0.0.1",
+  "version": "0.1",
   "authors": [
     "Jacob Arriola <jacob@zeek.com>",
     "Steve Zehngut <steve@zeek.com>",
-    "David Arceneaux <david@zeek.com>"
+    "David Arceneaux <david@zeek.com>",
+    "Steve Weaver Crawford <steve@australiansteve.com>"
   ],
-  "description": "WordPress starter theme",
+  "description": "WordPress theme with WooCommerce compatibility",
   "keywords": [
     "wordpress",
     "gulp",
     "Foundation",
-    "sass"
+    "sass",
+    "WooCommerce"
   ],
   "license": "MIT",
   "private": true,
@@ -25,5 +27,8 @@
   ],
   "devDependencies": {
     "foundation": "~5.5.1"
+  },
+  "dependencies": {
+    "components-font-awesome": ">4.3.0"
   }
 }

@@ -72,6 +72,55 @@ gulp.task('jsHint', function() {
 		.pipe( notify( { message: "jsHint task complete", onLast: true } ) );
 } );
 
+// Our 'fontawesome' task, which handles our sass actions such as compliling and minification
+gulp.task('fontawesome', function() {
+		
+		gulp.src('./assets/components/components-font-awesome/fonts/**/*', {base: './assets/components/components-font-awesome/fonts'})
+		.pipe(gulp.dest('./assets/dist/fonts'));
+
+		gulp.src('./assets/components/components-font-awesome/scss/**/*.scss')
+		.pipe(sass({
+			style: 'expanded',
+			sourceComments: true
+		})
+		.on('error', notify.onError(function(error) {
+			return "Error: " + error.message;
+		}))
+		)
+		.pipe(autoprefixer({
+			browsers: ['last 2 versions', 'ie >= 8']
+		})) // our autoprefixer - add and remove vendor prefixes using caniuse.com
+		.pipe(sourcemaps.write('.'))
+		.pipe(gulp.dest('./assets/dist/css')) // Location of our .css file
+		.pipe(browserSync.stream({match: '**/*.css'}))
+		.pipe(notify({
+			message: "Font-Awesome task complete!"
+		}));
+
+});
+
+//Our 'deploy' task which deploys on a local dev environment
+gulp.task('deploylocal', function() {
+
+	var files = [
+		'assets/components/modernizr/modernizr.js',
+		'assets/components/fastclick/lib/fastclick.js',
+		'assets/components/foundation/js/foundation.min.js',
+		'assets/dist/**/*', 
+		'inc/**.*',
+		'js/**/*.js',
+		'languages/**.*',
+		'page-templates/**/*',
+		'screenshot.png',
+		'*.php',
+		'*.css'];
+
+	var dest = '/var/www/html/theme-dev/wp-content/themes/volcano';
+
+	return gulp.src(files, {base:"."})
+	        .pipe(gulp.dest(dest));
+});
+
 
 // Watch our files and fire off a task when something changes
 gulp.task('watch', function() {

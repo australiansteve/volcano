@@ -11,8 +11,8 @@
     "gulp-sourcemaps": "^1.6.0",
     "gulp-uglify": "^1.2.0"
   },
-  "name": "heisenberg",
-  "description": "Heisenberg - Zeek Starter Theme ===",
+  "name": "volcano",
+  "description": "Volcano - Zeek Starter Theme ===",
   "version": "0.1.0",
   "main": "gulpfile.js",
   "scripts": {
@@ -20,12 +20,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ZeekInteractive/heisenberg"
+    "url": "https://github.com/australiansteve/volcano"
   },
   "author": "Zeek Interactive",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ZeekInteractive/heisenberg/issues"
+    "url": "https://github.com/australiansteve/volcano/issues"
   },
-  "homepage": "https://github.com/ZeekInteractive/heisenberg"
+  "homepage": "https://github.com/australiansteve/volcano"
 }

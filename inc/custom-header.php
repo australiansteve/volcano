@@ -12,37 +12,37 @@
 	<?php endif; // End header image check. ?>
 
  *
- * @package Heisenberg
+ * @package Volcano
  */
 
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses heisenberg_header_style()
- * @uses heisenberg_admin_header_style()
- * @uses heisenberg_admin_header_image()
+ * @uses volcano_header_style()
+ * @uses volcano_admin_header_style()
+ * @uses volcano_admin_header_image()
  */
-function heisenberg_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'heisenberg_custom_header_args', array(
+function volcano_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( 'volcano_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
 		'width'                  => 1000,
 		'height'                 => 250,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'heisenberg_header_style',
-		'admin-head-callback'    => 'heisenberg_admin_header_style',
-		'admin-preview-callback' => 'heisenberg_admin_header_image',
+		'wp-head-callback'       => 'volcano_header_style',
+		'admin-head-callback'    => 'volcano_admin_header_style',
+		'admin-preview-callback' => 'volcano_admin_header_image',
 	) ) );
 }
-add_action( 'after_setup_theme', 'heisenberg_custom_header_setup' );
+add_action( 'after_setup_theme', 'volcano_custom_header_setup' );
 
-if ( ! function_exists( 'heisenberg_header_style' ) ) :
+if ( ! function_exists( 'volcano_header_style' ) ) :
 /**
  * Styles the header image and text displayed on the blog
  *
- * @see heisenberg_custom_header_setup().
+ * @see volcano_custom_header_setup().
  */
-function heisenberg_header_style() {
+function volcano_header_style() {
 	$header_text_color = get_header_textcolor();
 
 	// If no custom options for text are set, let's bail
@@ -75,15 +75,15 @@ function heisenberg_header_style() {
 	</style>
 	<?php
 }
-endif; // heisenberg_header_style
+endif; // volcano_header_style
 
-if ( ! function_exists( 'heisenberg_admin_header_style' ) ) :
+if ( ! function_exists( 'volcano_admin_header_style' ) ) :
 /**
  * Styles the header image displayed on the Appearance > Header admin panel.
  *
- * @see heisenberg_custom_header_setup().
+ * @see volcano_custom_header_setup().
  */
-function heisenberg_admin_header_style() {
+function volcano_admin_header_style() {
 ?>
 	<style type="text/css">
 		.appearance_page_custom-header #headimg {
@@ -103,15 +103,15 @@ function heisenberg_admin_header_style() {
 	</style>
 <?php
 }
-endif; // heisenberg_admin_header_style
+endif; // volcano_admin_header_style
 
-if ( ! function_exists( 'heisenberg_admin_header_image' ) ) :
+if ( ! function_exists( 'volcano_admin_header_image' ) ) :
 /**
  * Custom header image markup displayed on the Appearance > Header admin panel.
  *
- * @see heisenberg_custom_header_setup().
+ * @see volcano_custom_header_setup().
  */
-function heisenberg_admin_header_image() {
+function volcano_admin_header_image() {
 	$style = sprintf( ' style="color:#%s;"', get_header_textcolor() );
 ?>
 	<div id="headimg">
@@ -123,4 +123,4 @@ function heisenberg_admin_header_image() {
 	</div>
 <?php
 }
-endif; // heisenberg_admin_header_image
+endif; // volcano_admin_header_image

@@ -1,4 +1,4 @@
-#Heisenberg - Zeek Starter Theme
+#Volcano - Zeek Starter Theme
 
 This is the Zeek Starter theme, based on <a href="http://underscores.me/">Underscores</a> and Foundation 5.5.1.
 

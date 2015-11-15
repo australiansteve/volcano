@@ -1,8 +1,8 @@
 <?php
 /**
- * Heisenberg functions and definitions
+ * Volcano functions and definitions
  *
- * @package Heisenberg
+ * @package Volcano
  */
 
 /**
@@ -12,7 +12,7 @@ if ( ! isset( $content_width ) ) {
 	$content_width = 640; /* pixels */
 }
 
-if ( ! function_exists( 'heisenberg_setup' ) ) :
+if ( ! function_exists( 'volcano_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -20,15 +20,15 @@ if ( ! function_exists( 'heisenberg_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function heisenberg_setup() {
+function volcano_setup() {
 
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on Heisenberg, use a find and replace
-	 * to change 'heisenberg' to the name of your theme in all the template files
+	 * If you're building a theme based on Volcano, use a find and replace
+	 * to change 'volcano' to the name of your theme in all the template files
 	 */
-	load_theme_textdomain( 'heisenberg', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'volcano', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -50,7 +50,7 @@ function heisenberg_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', 'heisenberg' ),
+		'primary' => __( 'Primary Menu', 'volcano' ),
 	) );
 
 	/*
@@ -70,22 +70,22 @@ function heisenberg_setup() {
 	) );
 
 	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'heisenberg_custom_background_args', array(
+	add_theme_support( 'custom-background', apply_filters( 'volcano_custom_background_args', array(
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
 }
-endif; // heisenberg_setup
-add_action( 'after_setup_theme', 'heisenberg_setup' );
+endif; // volcano_setup
+add_action( 'after_setup_theme', 'volcano_setup' );
 
 /**
  * Register widget area.
  *
  * @link http://codex.wordpress.org/Function_Reference/register_sidebar
  */
-function heisenberg_widgets_init() {
+function volcano_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'heisenberg' ),
+		'name'          => __( 'Sidebar', 'volcano' ),
 		'id'            => 'sidebar-1',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -94,20 +94,20 @@ function heisenberg_widgets_init() {
 		'after_title'   => '</h1>',
 	) );
 }
-add_action( 'widgets_init', 'heisenberg_widgets_init' );
+add_action( 'widgets_init', 'volcano_widgets_init' );
 
 
 /**
  * Enqueue styles.
  */
-if ( !function_exists( 'heisenberg_styles' ) ) :
+if ( !function_exists( 'volcano_styles' ) ) :
 
-	function heisenberg_styles() {
+	function volcano_styles() {
 		// Enqueue our stylesheet
-		wp_enqueue_style( 'heisenberg_styles', get_stylesheet_directory_uri() . '/assets/dist/css/app.css', '', '1.1.0' );
+		wp_enqueue_style( 'volcano_styles', get_stylesheet_directory_uri() . '/assets/dist/css/app.css', '', '1.1.0' );
 	}
 
-add_action( 'wp_enqueue_scripts', 'heisenberg_styles' );
+add_action( 'wp_enqueue_scripts', 'volcano_styles' );
 
 endif;
 
@@ -115,7 +115,7 @@ endif;
 /**
  * Enqueue scripts.
  */
-function heisenberg_scripts() {
+function volcano_scripts() {
 
 	// Add modernizer.js for shimming HTML5 elements that older browsers may not detect and for mobile detection
 	wp_enqueue_script ( 'modernizr', get_template_directory_uri() . '/assets/components/modernizr/modernizr.js', '', '', false );
@@ -130,23 +130,23 @@ function heisenberg_scripts() {
 	if ( WP_DEBUG ) {
 
 		// Enqueue our full version if in development mode
-		wp_enqueue_script( 'heisenberg_appjs', get_template_directory_uri() . '/assets/dist/js/app.js', array( 'jquery' ), '', true );
+		wp_enqueue_script( 'volcano_appjs', get_template_directory_uri() . '/assets/dist/js/app.js', array( 'jquery' ), '', true );
 
 	} else {
 
 		// Enqueue minified js if in production mode
-		wp_enqueue_script( 'heisenberg_appjs', get_template_directory_uri() . '/assets/dist/js/app.min.js', array( 'jquery' ), '', true );
+		wp_enqueue_script( 'volcano_appjs', get_template_directory_uri() . '/assets/dist/js/app.min.js', array( 'jquery' ), '', true );
 	}
 
-	wp_enqueue_script( 'heisenberg-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
+	wp_enqueue_script( 'volcano-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
-	wp_enqueue_script( 'heisenberg-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+	wp_enqueue_script( 'volcano-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'heisenberg_scripts' );
+add_action( 'wp_enqueue_scripts', 'volcano_scripts' );
 
 /**
  * Implement the Custom Header feature.
@@ -185,9 +185,9 @@ function foundation_header(){
 	<?php
 }
 
-add_filter( 'wp_nav_menu', 'heisenberg_nav_menu', 10, 2 );
+add_filter( 'wp_nav_menu', 'volcano_nav_menu', 10, 2 );
 
-function heisenberg_nav_menu( $menu ){
+function volcano_nav_menu( $menu ){
 	$menu = str_replace('current-menu-item', 'current-menu-item active', $menu);
 	return $menu;
 }

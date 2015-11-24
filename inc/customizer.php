@@ -55,11 +55,11 @@ function volcano_customize_css()
 {
     ?>
          <style type="text/css">
-             #masthead, #masthead>.row, .top-bar, .top-bar-section li:not(.has-form) a:not(.button) { 
+             #masthead, #masthead>.row, .top-bar, .top-bar-section li:not(.has-form) a:not(.button), .top-bar-section li:not(.has-form) a:not(.button):hover { 
              	background:<?php echo get_theme_mod('header_background_color', '#FFFFFF'); ?>; 
              }
 
-             .site-title a, .top-bar-section li:not(.has-form) a:not(.button) { 
+             .site-title a, .top-bar-section li:not(.has-form) a:not(.button), .top-bar-section li:not(.has-form) a:not(.button):hover { 
              	color:<?php echo get_theme_mod('header_text_color', '#000000'); ?>; 
              }
          </style>

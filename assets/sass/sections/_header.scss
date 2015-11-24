@@ -15,10 +15,14 @@
 	margin: 0;
 }
 
-.main-navigation {
-	background: #333;
+.primary-navigation {
+
+	.top-bar-section ul li>a {
+		font-size: 0.95rem;
+	}
 }
 
-.main-navigation ul {
-	margin: 0;
+.top-bar-section li:not(.has-form) a:not(.button):hover {
+	text-decoration: underline;
 }
+

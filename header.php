@@ -60,7 +60,7 @@
 
 						<div class="medium-12 columns show-for-medium-up"><!-- .columns start -->
 
-							<nav class="top-bar" data-topbar role="navigation">
+							<nav class="top-bar secondary-navigation" data-topbar role="navigation">
 								<ul class="title-area">
 
 									<li class="name"></li>
@@ -86,7 +86,7 @@
 
 						<div class="small-12 columns"><!-- .columns start -->
 
-							<nav class="top-bar" data-topbar role="navigation">
+							<nav class="top-bar primary-navigation" data-topbar role="navigation">
 								<ul class="title-area">
 
 									<li class="name"></li>
@@ -108,7 +108,7 @@
 											<?php wp_nav_menu( array( 'theme_location' => 'secondary', 'container' => '', 'menu_class' => '', 'menu_id' => '', 'items_wrap' => '%3$s' ) ); ?>
 										
 										</span>
-										
+
 									</ul>
 
 								</section>

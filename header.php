@@ -19,24 +19,7 @@
 
 <body <?php body_class(); ?>>
 
-
-<div class="off-canvas-wrap" data-offcanvas>
-	<div class="inner-wrap">
-
-		<nav class="tab-bar show-for-small-only">
-			<section class="left-small">
-				<a class="left-off-canvas-toggle menu-icon" ><span></span></a>
-			</section>
-		</nav>
-
-		<!-- Off Canvas Menu -->
-		<aside class="left-off-canvas-menu">
-		<!-- whatever you want goes here -->
-			<ul>
-				<li><a href="<?php bloginfo('url'); ?>">Home</a></li>
-				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => '', 'menu_class' => '', 'menu_id' => '', 'items_wrap' => '%3$s' ) ); ?>
-			</ul>
-		</aside>
+	<!--?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => '', 'menu_class' => '', 'menu_id' => '', 'items_wrap' => '%3$s' ) ); ?-->
 
 
 <div id="page" class="hfeed site">
@@ -45,7 +28,7 @@
 
 		<div class="row"><!-- .row start -->
 
-			<div class="small-12 columns"><!-- .columns start -->
+			<div class="small-12 medium-4 columns"><!-- .columns start -->
 
 				<div class="site-branding">
 
@@ -69,26 +52,77 @@
 
 			</div><!-- .columns end -->
 
-		</div><!-- .row end -->
+			<div class="small-12 medium-8 columns"><!-- .columns start -->
 
-	</header><!-- #masthead -->
+				<div class="menus">
 
-	<div class="main-navigation">
+					<div class="row"><!-- .row start -->
 
-		<div class="row"><!-- .row start -->
+						<div class="medium-12 columns show-for-medium-up"><!-- .columns start -->
 
-			<div class="small-12 columns"><!-- .columns start -->
+							<nav class="top-bar" data-topbar role="navigation">
+								<ul class="title-area">
 
-				<nav id="site-navigation" class="top-bar hide-for-small" data-topbar role="navigation">
-					<section class="top-bar-section">
-						<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-					</section>
-				</nav><!-- #site-navigation -->
+									<li class="name"></li>
+
+									<!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+									<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+
+								</ul>
+
+								<section class="top-bar-section">
+
+									<!-- Right Nav Section -->
+									<ul class="right">
+
+										<?php wp_nav_menu( array( 'theme_location' => 'secondary', 'container' => '', 'menu_class' => '', 'menu_id' => '', 'items_wrap' => '%3$s' ) ); ?>
+
+									</ul>
+
+								</section>
+							</nav>
+
+						</div><!-- .columns end -->
+
+						<div class="small-12 columns"><!-- .columns start -->
+
+							<nav class="top-bar" data-topbar role="navigation">
+								<ul class="title-area">
+
+									<li class="name"></li>
+
+									<!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+									<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+
+								</ul>
+
+								<section class="top-bar-section">
+
+									<!-- Right Nav Section -->
+									<ul class="right">
+
+										<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => '', 'menu_class' => '', 'menu_id' => '', 'items_wrap' => '%3$s' ) ); ?>
+
+										<span class="show-for-small-only">
+
+											<?php wp_nav_menu( array( 'theme_location' => 'secondary', 'container' => '', 'menu_class' => '', 'menu_id' => '', 'items_wrap' => '%3$s' ) ); ?>
+										
+										</span>
+										
+									</ul>
+
+								</section>
+							</nav>
+
+						</div><!-- .columns end -->
+
+					</div><!-- .row end -->
+				</div><!-- .menus -->
 
 			</div><!-- .columns end -->
 
 		</div><!-- .row end -->
 
-	</div><!-- .main-navigation -->
+	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

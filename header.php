@@ -36,7 +36,21 @@
 
 						<div class="small-12 columns"><!-- .columns start -->
 
-							<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+							<h1 class="site-title">
+								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+
+								<?php 
+								if (get_theme_mod('bloglogo') === '')
+								{
+									echo bloginfo('name');
+								}
+								else
+								{
+									echo "<img src='".get_theme_mod('bloglogo')."'/>";
+								}
+								?>
+								</a>
+							</h1>
 
 						</div><!-- .columns end -->
 

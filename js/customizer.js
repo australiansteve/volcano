@@ -47,4 +47,15 @@
 		} );
 	} );
 
+	// Logo
+	wp.customize( 'bloglogo', function( value ) {
+		value.bind( function( to ) {
+			if ( '' === to ) {
+				$( '.site-branding .site-title a' ).html( WPVARS.blogname );
+			} else {
+				$( '.site-branding .site-title a' ).html( "<img src='" + to + "'/>" );
+			}
+		} );
+	} );
+
 } )( jQuery );

@@ -3,7 +3,10 @@
 }
 
 .site-branding {
-	margin-bottom: 1.25rem;
+	
+	img.blog-logo {
+		max-height: 200px
+	}
 }
 
 .site-title {
@@ -26,3 +29,11 @@
 	text-decoration: underline;
 }
 
+/* Small screens only */
+@media only screen and (max-width: 40em) { 
+
+	.site-title {
+		text-align: center;
+	}
+
+}

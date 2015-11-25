@@ -46,7 +46,7 @@
 								}
 								else
 								{
-									echo "<img src='".get_theme_mod('bloglogo')."'/>";
+									echo "<img class='blog-logo' src='".get_theme_mod('bloglogo')."'/>";
 								}
 								?>
 								</a>

@@ -53,7 +53,7 @@
 			if ( '' === to ) {
 				$( '.site-branding .site-title a' ).html( WPVARS.blogname );
 			} else {
-				$( '.site-branding .site-title a' ).html( "<img src='" + to + "'/>" );
+				$( '.site-branding .site-title a' ).html( "<img class='blog-logo' src='" + to + "'/>" );
 			}
 		} );
 	} );

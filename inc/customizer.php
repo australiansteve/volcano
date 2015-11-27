@@ -80,15 +80,26 @@ add_action( 'customize_preview_init', 'volcano_customize_preview_js' );
 function volcano_customize_css()
 {
     ?>
-         <style type="text/css">
-             #masthead, #masthead>.row, .top-bar, .top-bar-section li:not(.has-form) a:not(.button), .top-bar-section li:not(.has-form) a:not(.button):hover { 
+        <style type="text/css">
+            #masthead, #masthead>.row, .top-bar, .top-bar-section li:not(.has-form) a:not(.button), .top-bar-section li:not(.has-form) a:not(.button):hover { 
              	background:<?php echo get_theme_mod('header_background_color', '#FFFFFF'); ?>; 
-             }
+            }
 
-             .site-title a, .top-bar-section li:not(.has-form) a:not(.button), .top-bar-section li:not(.has-form) a:not(.button):hover { 
-             	color:<?php echo get_theme_mod('header_text_color', '#000000'); ?>; 
-             }
-         </style>
+            @media only screen and (max-width: 40em) { 
+            	.top-bar, .top-bar.expanded .title-area { 
+             		background:<?php echo get_theme_mod('header_text_color', '#FFFFFF'); ?>; 
+             	}
+
+             	.top-bar-section ul li {
+				    border-bottom: 1px solid <?php echo get_theme_mod('header_text_color', '#FFFFFF'); ?>;
+				}
+			}
+
+            .site-title a, .top-bar-section li:not(.has-form) a:not(.button), .top-bar-section li:not(.has-form) a:not(.button):hover { 
+        	  	color:<?php echo get_theme_mod('header_text_color', '#000000'); ?>; 
+            }
+
+        </style>
     <?php
 }
 add_action( 'wp_head', 'volcano_customize_css');

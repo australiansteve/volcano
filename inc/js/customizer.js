@@ -21,11 +21,11 @@
 	wp.customize( 'header_text_color', function( value ) {
 		value.bind( function( to ) {
 			if ( 'blank' === to ) {
-				$( '.site-title a, .top-bar-section li:not(.has-form) a:not(.button)' ).css( {
+				$( '.site-title a, .top-bar li a:not(.button), .top-bar li a:not(.button):hover, .top-bar li a:not(.button):visited' ).css( {
 					'color': '#000'
 				} );
 			} else {
-				$( '.site-title a, .top-bar-section li:not(.has-form) a:not(.button)' ).css( {
+				$( '.site-title a, .top-bar li a:not(.button), .top-bar li a:not(.button):hover, .top-bar li a:not(.button):visited' ).css( {
 					'color': to
 				} );
 			}
@@ -36,11 +36,11 @@
 	wp.customize( 'header_background_color', function( value ) {
 		value.bind( function( to ) {
 			if ( 'blank' === to ) {
-				$( '#masthead, #masthead>.row, .top-bar, .top-bar-section li:not(.has-form) a:not(.button), .top-bar-section li:not(.has-form) a:not(.button):hover' ).css( {
+				$( '#masthead, #masthead>.row' ).css( {
 					'background': '#FFF'
 				} );
 			} else {
-				$( '#masthead, #masthead>.row, .top-bar, .top-bar-section li:not(.has-form) a:not(.button), .top-bar-section li:not(.has-form) a:not(.button):hover' ).css( {
+				$( '#masthead, #masthead>.row' ).css( {
 					'background': to
 				} );
 			}

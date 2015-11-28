@@ -64,7 +64,7 @@ add_action( 'customize_register', 'volcano_customize_register' );
  */
 function volcano_customize_preview_js() {// Localize the script with new data
 
-	wp_register_script( 'volcano_customizer', '/js/customizer.js', array( 'customize-preview' ), '20130508', true );
+	wp_register_script( 'volcano_customizer', get_template_directory_uri().'/js/customizer.js', array( 'customize-preview' ), '20130508', true );
 
 	$translation_array = array( 
 		'siteurl' => get_option('siteurl'), 
@@ -81,21 +81,27 @@ function volcano_customize_css()
 {
     ?>
         <style type="text/css">
-            #masthead, #masthead>.row, .top-bar, .top-bar-section li:not(.has-form) a:not(.button), .top-bar-section li:not(.has-form) a:not(.button):hover { 
+            #masthead, #masthead>.row { 
              	background:<?php echo get_theme_mod('header_background_color', '#FFFFFF'); ?>; 
             }
 
             @media only screen and (max-width: 40em) { 
-            	.top-bar, .top-bar.expanded .title-area { 
+            	.title-bar { 
              		background:<?php echo get_theme_mod('header_text_color', '#FFFFFF'); ?>; 
              	}
 
-             	.top-bar-section ul li {
+             	.top-bar {
+				    border-left: 1px solid <?php echo get_theme_mod('header_text_color', '#FFFFFF'); ?>;
+				    border-right: 1px solid <?php echo get_theme_mod('header_text_color', '#FFFFFF'); ?>;
+             	}
+
+             	.top-bar ul li {
 				    border-bottom: 1px solid <?php echo get_theme_mod('header_text_color', '#FFFFFF'); ?>;
 				}
+
 			}
 
-            .site-title a, .top-bar-section li:not(.has-form) a:not(.button), .top-bar-section li:not(.has-form) a:not(.button):hover { 
+            .site-title a, .top-bar li a:not(.button), .top-bar li a:not(.button):hover { 
         	  	color:<?php echo get_theme_mod('header_text_color', '#000000'); ?>; 
             }
 

@@ -19,17 +19,24 @@
 
 .primary-navigation {
 
-	.top-bar-section ul li>a {
-		font-size: 0.95rem;
+	ul li>a {
+		font-size: 1.20rem;
 	}
 }
 
-.top-bar-section li:not(.has-form) a:not(.button):hover {
-	text-decoration: underline;
+.secondary-navigation {
+
+	ul li>a {
+		font-size: 0.9rem;
+	}
 }
 
-.top-bar-section ul li {
-    background: none; 
+.top-bar, .top-bar ul {
+	background: none;
+}
+
+.top-bar li a:not(.button):hover {
+	text-decoration: underline;
 }
 
 /* Small screens only */
@@ -39,4 +46,12 @@
 		text-align: center;
 	}
 
+	.top-bar {
+ 		background: none;
+ 		padding: 0;
+    }
+
+	.primary-navigation ul li > a {
+	    font-size: 1rem;
+	}
 }

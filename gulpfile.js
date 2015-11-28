@@ -105,7 +105,6 @@ gulp.task('deploylocal', function() {
 	var files = [
 		'assets/components/modernizr/modernizr.js',
 		'assets/components/fastclick/lib/fastclick.js',
-		'assets/components/foundation/js/foundation.min.js',
 		'assets/dist/**/*', 
 		'node_modules/foundation-sites/dist/**/*', 
 		'inc/**.*',

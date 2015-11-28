@@ -189,3 +189,9 @@ function heisenberg_oembed_flex_wrapper( $html, $url, $attr, $post_ID ) {
 	$return = '<div class="flex-video">'.$html.'</div>';
 	return $return;
 }
+
+/* Declare WooCommerce support */
+add_action( 'after_setup_theme', 'woocommerce_support' );
+function woocommerce_support() {
+    add_theme_support( 'woocommerce' );
+}

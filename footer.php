@@ -14,13 +14,48 @@
 
 		<div class="row"><!-- .row start -->
 
-			<div class="small-12 columns"><!-- .columns start -->
+			<div class="small-12 columns text-center"><!-- .columns start -->
 
-				<div class="site-info">
+				<a class="social-link" href="#" ><i class="fa fa-2x fa-facebook-official"></i></a>
+				<a class="social-link" href="#" ><i class="fa fa-2x fa-instagram"></i></a>
+				<a class="social-link" href="#" ><i class="fa fa-2x fa-pinterest"></i></a>
+				<a class="social-link" href="#" ><i class="fa fa-2x fa-twitter-square"></i></a>
 
-					<p><i class="fa fa-copyright"></i> <?php echo date("Y");?> Copyright <?php bloginfo( 'name' ); ?></p>
+			</div><!-- .columns end -->
 
-				</div><!-- .site-info -->
+		</div><!-- .row end -->
+
+		<div class="row"><!-- .row start -->
+
+			<div class="small-12 columns text-center"><!-- .columns start -->
+
+				Subscribe
+
+			</div><!-- .columns end -->
+
+		</div><!-- .row end -->
+
+		<div class="row"><!-- .row start -->
+
+			<div class="small-12 columns text-center"><!-- .columns start -->
+
+				Other links
+
+			</div><!-- .columns end -->
+
+		</div><!-- .row end -->
+
+		<div class="row"><!-- .row start -->
+
+			<div class="small-12 medium-6 columns"><!-- .columns start -->
+
+				<p><i class="fa fa-copyright"></i> <?php bloginfo( 'name' ); ?> <?php echo date("Y");?></p>
+
+			</div><!-- .columns end -->
+
+			<div class="small-12 medium-6 columns text-right"><!-- .columns start -->
+
+				<a href="#" class="fa fa-caret-up return-to-top">Top</a>
 
 			</div><!-- .columns end -->
 

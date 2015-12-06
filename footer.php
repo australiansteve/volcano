@@ -29,7 +29,7 @@
 
 			<div class="small-12 columns text-center"><!-- .columns start -->
 
-				Subscribe
+				<?php dynamic_sidebar('sidebar-2'); ?>
 
 			</div><!-- .columns end -->
 

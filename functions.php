@@ -99,8 +99,8 @@ function volcano_widgets_init() {
 		'name'          => __( 'Footer', 'volcano' ),
 		'id'            => 'sidebar-2',
 		'description'   => '',
-		'before_widget' => '',
-		'after_widget'  => '',
+		'before_widget' => '<div class="volcano-footer">',
+		'after_widget'  => '</div>',
 		'before_title'  => '',
 		'after_title'   => '',
 	) );

@@ -24,9 +24,16 @@
 				$( '.site-title a, .top-bar li a:not(.button), .top-bar li a:not(.button):hover, .top-bar li a:not(.button):visited' ).css( {
 					'color': '#000'
 				} );
+				$( '#colophon button[type="submit"]' ).css( {
+					'background': '#000'
+				} );
+
 			} else {
 				$( '.site-title a, .top-bar li a:not(.button), .top-bar li a:not(.button):hover, .top-bar li a:not(.button):visited' ).css( {
 					'color': to
+				} );
+				$( '#colophon button[type="submit"]' ).css( {
+					'background': '#000'
 				} );
 			}
 		} );
@@ -39,9 +46,15 @@
 				$( '#masthead, #masthead>.row' ).css( {
 					'background': '#FFF'
 				} );
+				$( '#colophon button[type="submit"]' ).css( {
+					'color': '#000'
+				} );
 			} else {
 				$( '#masthead, #masthead>.row' ).css( {
 					'background': to
+				} );
+				$( '#colophon button[type="submit"]' ).css( {
+					'color': to
 				} );
 			}
 		} );

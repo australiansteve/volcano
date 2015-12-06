@@ -105,6 +105,11 @@ function volcano_customize_css()
         	  	color:<?php echo get_theme_mod('header_text_color', '#000000'); ?>; 
             }
 
+            #colophon button[type="submit"] {
+            	background: <?php echo get_theme_mod('header_text_color', '#FFFFFF'); ?>;
+            	color: <?php echo get_theme_mod('header_background_color', '#000000'); ?>;
+            }
+
         </style>
     <?php
 }

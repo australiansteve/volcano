@@ -55,7 +55,7 @@
 
 			<div class="small-12 medium-6 columns text-right"><!-- .columns start -->
 
-				<a href="#" class="fa fa-caret-up return-to-top">Top</a>
+				<a href="#" class="return-to-top"><i class="fa fa-caret-up"></i> Top</a>
 
 			</div><!-- .columns end -->
 

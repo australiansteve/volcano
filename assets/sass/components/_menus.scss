@@ -1,4 +1,12 @@
 
+.top-bar, .top-bar ul {
+	background: none;
+}
+
+.top-bar li a:not(.button):hover {
+	text-decoration: underline;
+}
+
 .primary-navigation {
 
 	ul li > a {

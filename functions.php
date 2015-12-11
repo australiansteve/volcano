@@ -105,6 +105,16 @@ function volcano_widgets_init() {
 		'before_title'  => '',
 		'after_title'   => '',
 	) );
+
+	register_sidebar( array(
+		'name'          => __( 'Slider', 'volcano' ),
+		'id'            => 'sidebar-3',
+		'description'   => '',
+		'before_widget' => '<div class="volcano-slider">',
+		'after_widget'  => '</div>',
+		'before_title'  => '',
+		'after_title'   => '',
+	) );
 }
 add_action( 'widgets_init', 'volcano_widgets_init' );
 

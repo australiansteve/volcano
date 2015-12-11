@@ -25,3 +25,11 @@
 .entry-content p {
 	margin-bottom: 1.25rem;
 }
+
+.row.full-width {
+	max-width: none;
+
+	.columns {
+		padding: 0;
+	}
+}

@@ -9,9 +9,19 @@
 
 get_header(); ?>
 
+<div class="row full-width"><!-- .row start -->
+
+	<div class="small-12 columns"><!-- .columns start -->
+
+		<?php dynamic_sidebar('sidebar-3'); ?>
+
+	</div><!-- .columns end -->
+
+</div><!-- .row end -->
+
 <div class="row"><!-- .row start -->
 
-	<div class="medium-8 small-12 columns"><!-- .columns start -->
+	<div class="small-12 columns"><!-- .columns start -->
 
 		<div id="primary" class="content-area">
 			<main id="main" class="site-main" role="main">
@@ -26,7 +36,7 @@ get_header(); ?>
 						 * If you want to override this in a child theme, then include a file
 						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 						 */
-						get_template_part( 'page-templates/partials/content', get_post_format() );
+						get_template_part( 'page-templates/partials/content-titleless', get_post_format() );
 					?>
 
 				<?php endwhile; ?>
@@ -35,7 +45,7 @@ get_header(); ?>
 
 			<?php else : ?>
 
-				<?php get_template_part( 'page-templates/partials/content', 'none' ); ?>
+				<?php get_template_part( 'page-templates/partials/content-titleless', 'none' ); ?>
 
 			<?php endif; ?>
 
@@ -44,7 +54,11 @@ get_header(); ?>
 
 	</div><!-- .columns end -->
 
-	<div class="medium-4 small-12 columns"><!-- .columns start -->
+</div><!-- .row end -->
+
+<div class="row"><!-- .row start -->
+
+	<div class="small-12 columns"><!-- .columns start -->
 
 		<?php get_sidebar(); ?>
 

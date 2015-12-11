@@ -63,11 +63,11 @@
 
 			</div><!-- .columns end -->
 
-			<div class="small-12 medium-8 columns"><!-- .columns start -->
+			<div class="small-12 medium-8 columns show-for-medium"><!-- .columns start -->
 
 				<div class="row"><!-- .row start -->
 
-					<div class="medium-12 columns show-for-medium"><!-- .columns start -->
+					<div class="medium-12 columns"><!-- .columns start -->
 
 						<div class="top-bar secondary-navigation" data-topbar role="navigation">
 						
@@ -80,6 +80,38 @@
 
 									 	$args = array (
 										 	'theme_location' 	=> 'secondary',
+										 	'container' 		=> '',
+										 	'menu_class' 		=> '',
+										 	'menu_id' 			=> '',
+										 	'items_wrap' 		=> '%3$s'
+									 	);
+										wp_nav_menu( $args ); 
+									?>
+
+								</ul>
+
+							</div>
+						</div>
+
+					</div><!-- .columns end -->
+
+				</div><!-- .row.menus -->
+
+				<div class="row"><!-- .row start -->
+
+					<div class="small-12 columns"><!-- .columns start -->
+
+						<div class="top-bar tertiary-navigation text-center" data-topbar role="navigation">
+						
+							<div class="top-bar-right">
+
+								<!-- Right Nav Section -->
+								<ul class="horizontal menu">
+
+									<?php 
+
+									 	$args = array (
+										 	'theme_location' 	=> 'tertiary',
 										 	'container' 		=> '',
 										 	'menu_class' 		=> '',
 										 	'menu_id' 			=> '',

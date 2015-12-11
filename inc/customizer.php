@@ -90,12 +90,12 @@ function volcano_customize_css()
              		background:<?php echo get_theme_mod('header_text_color', '#FFFFFF'); ?>; 
              	}
 
-             	.top-bar {
+             	.primary-navigation.top-bar {
 				    border-left: 1px solid <?php echo get_theme_mod('header_text_color', '#FFFFFF'); ?>;
 				    border-right: 1px solid <?php echo get_theme_mod('header_text_color', '#FFFFFF'); ?>;
              	}
 
-             	.top-bar ul li {
+             	.primary-navigation ul li {
 				    border-bottom: 1px solid <?php echo get_theme_mod('header_text_color', '#FFFFFF'); ?>;
 				}
 

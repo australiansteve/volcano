@@ -17,20 +17,6 @@
 	margin: 0;
 }
 
-.primary-navigation {
-
-	ul li>a {
-		font-size: 1.20rem;
-	}
-}
-
-.secondary-navigation {
-
-	ul li>a {
-		font-size: 0.9rem;
-	}
-}
-
 .top-bar, .top-bar ul {
 	background: none;
 }
@@ -46,12 +32,4 @@
 		text-align: center;
 	}
 
-	.top-bar {
- 		background: none;
- 		padding: 0;
-    }
-
-	.primary-navigation ul li > a {
-	    font-size: 1rem;
-	}
 }

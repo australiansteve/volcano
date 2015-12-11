@@ -14,12 +14,23 @@
 
 		<div class="row"><!-- .row start -->
 
-			<div class="small-12 columns text-center"><!-- .columns start -->
+			<div class="small-12 columns text-center tertiary-navigation"><!-- .columns start -->
 
-				<a class="social-link" href="#" ><i class="fa fa-2x fa-facebook-official"></i></a>
-				<a class="social-link" href="#" ><i class="fa fa-2x fa-instagram"></i></a>
-				<a class="social-link" href="#" ><i class="fa fa-2x fa-pinterest"></i></a>
-				<a class="social-link" href="#" ><i class="fa fa-2x fa-twitter-square"></i></a>
+				<ul class="horizontal menu">
+
+					<?php 
+
+					 	$args = array (
+						 	'theme_location' 	=> 'tertiary',
+						 	'container' 		=> '',
+						 	'menu_class' 		=> '',
+						 	'menu_id' 			=> '',
+						 	'items_wrap' 		=> '%3$s'
+					 	);
+						wp_nav_menu( $args ); 
+					?>
+
+				</ul>
 
 			</div><!-- .columns end -->
 

@@ -7,18 +7,12 @@
 	text-decoration: underline;
 }
 
-.primary-navigation {
-
-	ul li > a {
-		font-size: 1.20rem;
-	}
+.primary-navigation.top-bar {
+	background: none;
 }
 
-.secondary-navigation {
-
-	ul li > a {
-		font-size: 0.9rem;
-	}
+.primary-navigation ul li > a {
+    font-size: 1rem;
 }
 
 .tertiary-navigation {
@@ -52,11 +46,29 @@
 @media only screen and (max-width: 40em) { 
 
 	.primary-navigation.top-bar {
- 		background: none;
- 		padding: 0;
-    }
-
-	.primary-navigation ul li > a {
-	    font-size: 1rem;
+			background: none;
+			padding: 0;
 	}
+	
+}
+
+// Medium screens
+@media only screen and (min-width: 40.063em) { 
+
+	.primary-navigation {
+
+		ul li > a {
+			font-size: 0.75rem;
+			text-transform: uppercase;
+		}
+	}
+
+	.secondary-navigation {
+
+		ul li > a {
+			font-size: 0.75rem;
+			text-transform: uppercase;
+		}
+	}
+
 }

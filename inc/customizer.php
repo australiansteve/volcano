@@ -64,7 +64,7 @@ add_action( 'customize_register', 'volcano_customize_register' );
  */
 function volcano_customize_preview_js() {// Localize the script with new data
 
-	wp_register_script( 'volcano_customizer', get_template_directory_uri().'/js/customizer.js', array( 'customize-preview' ), '20130508', true );
+	wp_register_script( 'volcano_customizer', get_template_directory_uri().'/inc/js/customizer.js', array( 'customize-preview' ), '20130508', true );
 
 	$translation_array = array( 
 		'siteurl' => get_option('siteurl'), 

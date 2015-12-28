@@ -25,7 +25,7 @@
 
 		<div class="row"><!-- .row start -->
 
-			<div class="small-12 medium-2 columns"><!-- .columns start -->
+			<div class="small-12 medium-3 columns"><!-- .columns start -->
 
 				<div class="site-branding">
 
@@ -63,7 +63,7 @@
 
 			</div><!-- .columns end -->
 
-			<div class="small-12 medium-10 columns"><!-- .columns start -->
+			<div class="small-12 medium-9 columns"><!-- .columns start -->
 
 				<div class="row show-for-medium"><!-- .row start -->
 

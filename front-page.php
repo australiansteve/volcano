@@ -23,7 +23,7 @@ get_header(); ?>
 
 	<div class="small-12 columns"><!-- .columns start -->
 
-		<div id="primary" class="content-area">
+		<div id="primary" class="content-area frontpage">
 			<main id="main" class="site-main" role="main">
 
 			<?php if ( have_posts() ) : ?>

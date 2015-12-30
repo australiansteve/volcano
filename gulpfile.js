@@ -107,7 +107,7 @@ gulp.task('deploylocal', function() {
 		'assets/components/fastclick/lib/fastclick.js',
 		'assets/dist/**/*', 
 		'node_modules/foundation-sites/dist/**/*', 
-		'inc/**.*',
+		'inc/**/*.*',
 		'js/**/*.js',
 		'languages/**.*',
 		'page-templates/**/*',

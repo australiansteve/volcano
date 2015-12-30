@@ -4,6 +4,15 @@
  * Contains handlers to make Theme Customizer preview reload changes asynchronously.
  */
 
+function hexToRgb(hex) {
+    var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+    return result ? {
+        r: parseInt(result[1], 16),
+        g: parseInt(result[2], 16),
+        b: parseInt(result[3], 16)
+    } : null;
+}
+
 ( function( $ ) {
 	// Site title and description.
 	wp.customize( 'blogname', function( value ) {
@@ -67,6 +76,36 @@
 				$( '.site-branding .site-title a' ).html( WPVARS.blogname );
 			} else {
 				$( '.site-branding .site-title a' ).html( "<img class='blog-logo' src='" + to + "'/>" );
+			}
+		} );
+	} );
+
+	// Woocommerce color 1.
+	wp.customize( 'wc_color_1', function( value ) {
+		value.bind( function( to ) {
+			if ( 'blank' === to ) {
+				$( '' ).css( {
+					'background': '#8fae1b'
+				} );
+			} else {
+				$( '' ).css( {
+					'background': to
+				} );
+			}
+		} );
+	} );
+
+	// Woocommerce color 2.
+	wp.customize( 'wc_color_2', function( value ) {
+		value.bind( function( to ) {
+			if ( 'blank' === to ) {
+				$( '.woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt' ).css( {
+					'background-color': '#a46497'
+				} );
+			} else {
+				$( '.woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt' ).css( {
+					'background-color': to
+				} );
 			}
 		} );
 	} );

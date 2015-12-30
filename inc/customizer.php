@@ -56,6 +56,41 @@ function volcano_customize_register( $wp_customize ) {
 
 	$wp_customize->get_setting( 'bloglogo' )->transport = 'postMessage';
 	
+	/* START - WooCommerce customizations */
+	$wp_customize->add_section( 'volcano_woocommerce' , array(
+	    'title'      	=> __('WooCommerce customizations','volcano'),
+	    'description'	=> __('If the WooCommerce plugin is installed, use this section to override some aspects of the default styling.','volcano'),
+	    'priority'   	=> 120,
+	) );
+
+	$wp_customize->add_setting( 'wc_color_1' , array(
+	    'default'     => '#8fae1b',
+	    'transport'   => 'postMessage',
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'wc_color_1', array(
+		'label'        => __( 'WooCommerce color 1', 'volcano' ),
+		'section'    => 'volcano_woocommerce',
+		'settings'   => 'wc_color_1',
+	) ) );
+
+	$wp_customize->get_setting( 'wc_color_1' )->transport = 'postMessage';
+
+	$wp_customize->add_setting( 'wc_color_2' , array(
+	    'default'     => '#a46497',
+	    'transport'   => 'postMessage',
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'wc_color_2', array(
+		'label'        => __( 'WooCommerce color 2', 'volcano' ),
+		'section'    => 'volcano_woocommerce',
+		'settings'   => 'wc_color_2',
+	) ) );
+
+	$wp_customize->get_setting( 'wc_color_2' )->transport = 'postMessage';
+
+	/* END - WooCommerce customizations */
+
 }
 add_action( 'customize_register', 'volcano_customize_register' );
 
@@ -109,6 +144,19 @@ function volcano_customize_css()
             	background: <?php echo get_theme_mod('header_text_color', '#FFFFFF'); ?>;
             	color: <?php echo get_theme_mod('header_background_color', '#000000'); ?>;
             }
+
+
+            /* WooCommerce customizations */
+            .woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt {
+    			background-color: <?php echo get_theme_mod('wc_color_2', '#a46497'); ?>;
+			}
+
+			<?php $wc2_hex = get_theme_mod('wc_color_2', '#a46497');
+				list($wc2_r, $wc2_g, $wc2_b) = sscanf($wc2_hex, "#%02x%02x%02x");
+			?>
+			.woocommerce #respond input#submit.alt:hover, .woocommerce a.button.alt:hover, .woocommerce button.button.alt:hover, .woocommerce input.button.alt:hover {
+    			background-color: rgba(<?php echo "$wc2_r, $wc2_g, $wc2_b, 0.6"; ?>);
+			}
 
         </style>
     <?php

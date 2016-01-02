@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-<div class="row full-width"><!-- .row start -->
+<div class="row"><!-- .row start -->
 
 	<div class="small-12 columns"><!-- .columns start -->
 

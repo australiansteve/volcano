@@ -87,9 +87,9 @@ add_action( 'after_setup_theme', 'volcano_setup' );
  */
 function volcano_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'volcano' ),
+		'name'          => __( 'Sidebar 1', 'volcano' ),
 		'id'            => 'sidebar-1',
-		'description'   => '',
+		'description'   => 'Used on the front page, closest to the bottom of the page inside the page content',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h1 class="widget-title">',
@@ -98,7 +98,7 @@ function volcano_widgets_init() {
 
 	register_sidebar( array(
 		'name'          => __( 'Footer', 'volcano' ),
-		'id'            => 'sidebar-2',
+		'id'            => 'footer-sidebar',
 		'description'   => '',
 		'before_widget' => '<div class="volcano-footer">',
 		'after_widget'  => '</div>',
@@ -108,7 +108,7 @@ function volcano_widgets_init() {
 
 	register_sidebar( array(
 		'name'          => __( 'Slider', 'volcano' ),
-		'id'            => 'sidebar-3',
+		'id'            => 'slider-sidebar',
 		'description'   => '',
 		'before_widget' => '<div class="volcano-slider">',
 		'after_widget'  => '</div>',

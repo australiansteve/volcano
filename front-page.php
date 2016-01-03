@@ -13,7 +13,7 @@ get_header(); ?>
 
 	<div class="small-12 columns"><!-- .columns start -->
 
-		<?php dynamic_sidebar('sidebar-3'); ?>
+		<?php dynamic_sidebar('slider-sidebar'); ?>
 
 	</div><!-- .columns end -->
 
@@ -53,6 +53,12 @@ get_header(); ?>
 		</div><!-- #primary -->
 
 	</div><!-- .columns end -->
+
+</div><!-- .row end -->
+
+<div class="row small-up-1 medium-up-2 austeve_gallery_preview"><!-- .row start -->
+
+	<?php dynamic_sidebar( 'austeve_gallery_1' ); ?>
 
 </div><!-- .row end -->
 

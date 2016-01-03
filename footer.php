@@ -40,7 +40,7 @@
 
 			<div class="small-12 columns text-center"><!-- .columns start -->
 
-				<?php dynamic_sidebar('sidebar-2'); ?>
+				<?php dynamic_sidebar('footer-sidebar'); ?>
 
 			</div><!-- .columns end -->
 

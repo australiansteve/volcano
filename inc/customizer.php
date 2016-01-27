@@ -14,6 +14,26 @@ function volcano_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 
+	/* Font family */
+	$wp_customize->add_setting( 'font_family' , array(
+	    'default'     => 'Helvetica',
+	    'transport'   => 'postMessage',
+	) );
+
+	$wp_customize->add_control( 'font_family', array(
+			'label'    => __( 'Header & footer font', 'volcano' ),
+			'section'  => 'colors',
+			'settings' => 'font_family',
+			'type'     => 'select',
+			'choices'  => array(
+				'Helvetica Neue'  => 'Helvetica Neue',
+				'Neou Thin' => 'Neou (thin)',
+				'Neou Bold' => 'Neou (thick)',
+			),
+	) );
+
+	$wp_customize->get_setting( 'font_family' )->transport = 'postMessage';
+
 	/* Header background colour */
 	$wp_customize->add_setting( 'header_background_color' , array(
 	    'default'     => '#FFFFFF',
@@ -119,6 +139,10 @@ function volcano_customize_css()
             #masthead, #masthead>.row { 
              	background:<?php echo get_theme_mod('header_background_color', '#FFFFFF'); ?>; 
             }
+
+            .menu-item a, .title-bar-title, #colophon { 
+				font-family: "<?php echo get_theme_mod('font_family', 'Helvetica Neue'); ?>", Helvetica, Roboto, Arial, sans-serif;;
+			}
 
             @media only screen and (max-width: 40em) { 
             	.title-bar { 

@@ -26,6 +26,17 @@ function hexToRgb(hex) {
 		} );
 	} );
 
+	//Font
+	wp.customize( 'font_family', function( value ) {
+		value.bind( function( to ) {
+			
+			$( '.menu-item a, .title-bar-title, #colophon' ).css( {
+					'font-family': '"' + to + '", Helvetica, Roboto, Arial, sans-serif'
+			} );
+
+		} );
+	} );
+
 	// Header text color.
 	wp.customize( 'header_text_color', function( value ) {
 		value.bind( function( to ) {

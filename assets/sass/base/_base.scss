@@ -1,6 +1,20 @@
 // Allows the use of rem-calc() or lower-bound() in your settings
 @import "../../components/foundation/scss/foundation/functions";
 
+@font-face {
+	font-family: 'Neou Thin';
+	src: url("../fonts/Neou-Thin.otf");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Neou Bold';
+	src: url("../fonts/Neou-Bold.otf");
+	font-weight: normal;
+	font-style: normal;
+}
+
 @import "variables";
 @import "grid";
 @import "typography";

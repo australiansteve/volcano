@@ -53,6 +53,7 @@ function volcano_setup() {
 		'primary' => __( 'Primary Menu', 'volcano' ),
       	'secondary' => __( 'Secondary Menu', 'volcano' ),
       	'tertiary' => __( 'Tertiary Menu', 'volcano' ),
+      	'quatro' => __( 'Fourth Menu', 'volcano' ),
 	) );
 
 	/*

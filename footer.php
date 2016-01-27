@@ -48,9 +48,23 @@
 
 		<div class="row"><!-- .row start -->
 
-			<div class="small-12 columns text-center"><!-- .columns start -->
+			<div class="small-12 columns text-center quatro-navigation"><!-- .columns start -->
 
-				Other links
+				<ul class="vertical medium-horizontal menu">
+
+					<?php 
+
+					 	$args = array (
+						 	'theme_location' 	=> 'quatro',
+						 	'container' 		=> '',
+						 	'menu_class' 		=> '',
+						 	'menu_id' 			=> '',
+						 	'items_wrap' 		=> '%3$s'
+					 	);
+						wp_nav_menu( $args ); 
+					?>
+
+				</ul>
 
 			</div><!-- .columns end -->
 

@@ -106,6 +106,34 @@ function hexToRgb(hex) {
 		} );
 	} );
 
+	// Woocommerce color 1.
+	wp.customize( 'wc_color_1', function( value ) {
+		value.bind( function( to ) {
+			if ( 'blank' === to ) {
+				$( '.woocommerce ul.products li.product .price del, .woocommerce ul.products li.product .price ins, .woocommerce div.product p.price, .woocommerce .woocommerce-message:before' ).css( {
+					'color': '#8fae1b'
+				} );
+				$( '.woocommerce span.onsale' ).css( {
+					'background-color': '#8fae1b'
+				} );
+				$( '.woocommerce .woocommerce-message' ).css( {
+					'border-top-color': '#8fae1b'
+				} );
+
+			} else {
+				$( '.woocommerce ul.products li.product .price del, .woocommerce ul.products li.product .price ins, .woocommerce div.product p.price, .woocommerce .woocommerce-message:before' ).css( {
+					'color': to
+				} );
+				$( '.woocommerce span.onsale' ).css( {
+					'background-color': to
+				} );
+				$( '.woocommerce .woocommerce-message' ).css( {
+					'border-top-color': to
+				} );
+			}
+		} );
+	} );
+
 	// Woocommerce color 2.
 	wp.customize( 'wc_color_2', function( value ) {
 		value.bind( function( to ) {

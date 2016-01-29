@@ -171,14 +171,35 @@ function volcano_customize_css()
 
 
             /* WooCommerce customizations */
-            .woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt {
+            .woocommerce ul.products li.product .price del, 
+            .woocommerce ul.products li.product .price ins,
+            .woocommerce div.product p.price,
+            .woocommerce .woocommerce-message:before {
+    			color: <?php echo get_theme_mod('wc_color_1', '#8fae1b'); ?>;
+			}
+
+			.woocommerce span.onsale {
+    			background-color: <?php echo get_theme_mod('wc_color_1', '#8fae1b'); ?>;
+			}
+
+			.woocommerce .woocommerce-message {
+				border-top-color: <?php echo get_theme_mod('wc_color_1', '#8fae1b'); ?>;
+			}
+
+            .woocommerce #respond input#submit.alt, 
+            .woocommerce a.button.alt, 
+            .woocommerce button.button.alt, 
+            .woocommerce input.button.alt {
     			background-color: <?php echo get_theme_mod('wc_color_2', '#a46497'); ?>;
 			}
 
 			<?php $wc2_hex = get_theme_mod('wc_color_2', '#a46497');
 				list($wc2_r, $wc2_g, $wc2_b) = sscanf($wc2_hex, "#%02x%02x%02x");
 			?>
-			.woocommerce #respond input#submit.alt:hover, .woocommerce a.button.alt:hover, .woocommerce button.button.alt:hover, .woocommerce input.button.alt:hover {
+			.woocommerce #respond input#submit.alt:hover, 
+			.woocommerce a.button.alt:hover, 
+			.woocommerce button.button.alt:hover, 
+			.woocommerce input.button.alt:hover {
     			background-color: rgba(<?php echo "$wc2_r, $wc2_g, $wc2_b, 0.6"; ?>);
 			}
 

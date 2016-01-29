@@ -149,4 +149,26 @@ function hexToRgb(hex) {
 		} );
 	} );
 
+	// Woocommerce color 3.
+	wp.customize( 'wc_color_3', function( value ) {
+		value.bind( function( to ) {
+			if ( 'blank' === to ) {
+				$( '.woocommerce .woocommerce-info:before' ).css( {
+					'color': '#8fae1b'
+				} );
+				$( '.woocommerce .woocommerce-info' ).css( {
+					'border-top-color': '#8fae1b'
+				} );
+
+			} else {
+				$( '.woocommerce .woocommerce-info:before' ).css( {
+					'color': to
+				} );
+				$( '.woocommerce .woocommerce-info' ).css( {
+					'border-top-color': to
+				} );
+			}
+		} );
+	} );
+
 } )( jQuery );

@@ -109,6 +109,20 @@ function volcano_customize_register( $wp_customize ) {
 
 	$wp_customize->get_setting( 'wc_color_2' )->transport = 'postMessage';
 
+	$wp_customize->add_setting( 'wc_color_3' , array(
+	    'default'     => '#a46497',
+	    'transport'   => 'postMessage',
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'wc_color_3', array(
+		'label'        => __( 'WooCommerce color 3', 'volcano' ),
+		'description'    => 'Info messages etc.',
+		'section'    => 'volcano_woocommerce',
+		'settings'   => 'wc_color_3',
+	) ) );
+
+	$wp_customize->get_setting( 'wc_color_3' )->transport = 'postMessage';
+
 	/* END - WooCommerce customizations */
 
 }
@@ -171,6 +185,7 @@ function volcano_customize_css()
 
 
             /* WooCommerce customizations */
+            /* Color 1 */
             .woocommerce ul.products li.product .price del, 
             .woocommerce ul.products li.product .price ins,
             .woocommerce div.product p.price,
@@ -186,6 +201,7 @@ function volcano_customize_css()
 				border-top-color: <?php echo get_theme_mod('wc_color_1', '#8fae1b'); ?>;
 			}
 
+            /* Color 2 */
             .woocommerce #respond input#submit.alt, 
             .woocommerce a.button.alt, 
             .woocommerce button.button.alt, 
@@ -201,6 +217,15 @@ function volcano_customize_css()
 			.woocommerce button.button.alt:hover, 
 			.woocommerce input.button.alt:hover {
     			background-color: rgba(<?php echo "$wc2_r, $wc2_g, $wc2_b, 0.6"; ?>);
+			}
+
+            /* Color 3 */
+			.woocommerce .woocommerce-info {
+				border-top-color: <?php echo get_theme_mod('wc_color_3', '#8fae1b'); ?>;
+			}
+
+			.woocommerce .woocommerce-info:before {
+    			color: <?php echo get_theme_mod('wc_color_3', '#8fae1b'); ?>;
 			}
 
         </style>

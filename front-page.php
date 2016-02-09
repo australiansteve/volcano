@@ -56,7 +56,7 @@ get_header(); ?>
 
 </div><!-- .row end -->
 
-<div class="row small-up-1 medium-up-2 austeve_gallery_preview"><!-- .row start -->
+<div class="row small-up-1 medium-up-3 austeve_gallery_preview"><!-- .row start -->
 
 	<?php dynamic_sidebar( 'austeve_gallery_1' ); ?>
 

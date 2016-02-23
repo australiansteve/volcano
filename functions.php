@@ -152,12 +152,12 @@ function volcano_scripts() {
 	if ( WP_DEBUG ) {
 
 		// Enqueue our full version if in development mode
-		wp_enqueue_script( 'volcano_appjs', get_template_directory_uri() . '/assets/dist/js/app.js', array( 'jquery' ), '1.0.1', true );
+		wp_enqueue_script( 'volcano_appjs', get_template_directory_uri() . '/assets/dist/js/app.js', array( 'jquery' ), '1.0.2', true );
 
 	} else {
 
 		// Enqueue minified js if in production mode
-		wp_enqueue_script( 'volcano_appjs', get_template_directory_uri() . '/assets/dist/js/app.min.js', array( 'jquery' ), '1.0.1', true );
+		wp_enqueue_script( 'volcano_appjs', get_template_directory_uri() . '/assets/dist/js/app.min.js', array( 'jquery' ), '1.0.2', true );
 	}
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

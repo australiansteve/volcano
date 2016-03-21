@@ -1,0 +1,22 @@
+article {
+	margin-bottom: 4rem;
+}
+
+.navigation {
+	margin: 2rem 0 3rem 0;
+}
+
+.navigation .nav-links>div {
+	display: inline-block;
+	width: 50%;
+	   padding: 0 2rem 0 2rem;
+}
+
+.nav-next {
+	text-align: right;
+}
+
+footer.entry-footer span:before {
+	content: '\A';
+	white-space: pre;
+} 

@@ -116,6 +116,16 @@ function volcano_widgets_init() {
 		'before_title'  => '',
 		'after_title'   => '',
 	) );
+
+	register_sidebar( array(
+		'name'          => __( 'Blog sidebar', 'volcano' ),
+		'id'            => 'blog-sidebar',
+		'description'   => 'Used on the side of blog & archive pages',
+		'before_widget' => '<div class="volcano-blog-sidebar">',
+		'after_widget'  => '</div>',
+		'before_title'  => '',
+		'after_title'   => '',
+	) );
 }
 add_action( 'widgets_init', 'volcano_widgets_init' );
 
@@ -152,12 +162,12 @@ function volcano_scripts() {
 	if ( WP_DEBUG ) {
 
 		// Enqueue our full version if in development mode
-		wp_enqueue_script( 'volcano_appjs', get_template_directory_uri() . '/assets/dist/js/app.js', array( 'jquery' ), '1.0.2', true );
+		wp_enqueue_script( 'volcano_appjs', get_template_directory_uri() . '/assets/dist/js/app.js', array( 'jquery' ), '1.0.3', true );
 
 	} else {
 
 		// Enqueue minified js if in production mode
-		wp_enqueue_script( 'volcano_appjs', get_template_directory_uri() . '/assets/dist/js/app.min.js', array( 'jquery' ), '1.0.2', true );
+		wp_enqueue_script( 'volcano_appjs', get_template_directory_uri() . '/assets/dist/js/app.min.js', array( 'jquery' ), '1.0.3', true );
 	}
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

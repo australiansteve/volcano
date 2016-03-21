@@ -53,7 +53,7 @@ get_header(); ?>
 
 	<div class="medium-4 small-12 columns"><!-- .columns start -->
 
-		<?php get_sidebar(); ?>
+		<?php dynamic_sidebar('blog-sidebar'); ?>
 
 	</div><!-- .columns end -->
 

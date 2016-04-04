@@ -115,7 +115,7 @@ gulp.task('deploylocal', function() {
 		'*.php',
 		'*.css'];
 
-	var dest = '/var/www/html/theme-dev/wp-content/themes/churchpew';
+	var dest = '/var/www/html/theme-dev/wp-content/themes/volcano';
 
 	return gulp.src(files, {base:"."})
 	        .pipe(gulp.dest(dest));

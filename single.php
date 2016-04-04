@@ -2,7 +2,7 @@
 /**
  * The template for displaying all single posts.
  *
- * @package ChurchPew
+ * @package Volcano
  */
 
 get_header(); ?>

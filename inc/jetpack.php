@@ -3,17 +3,17 @@
  * Jetpack Compatibility File
  * See: http://jetpack.me/
  *
- * @package ChurchPew
+ * @package Volcano
  */
 
 /**
  * Add theme support for Infinite Scroll.
  * See: http://jetpack.me/support/infinite-scroll/
  */
-function churchpew_jetpack_setup() {
+function volcano_jetpack_setup() {
 	add_theme_support( 'infinite-scroll', array(
 		'container' => 'main',
 		'footer'    => 'page',
 	) );
 }
-add_action( 'after_setup_theme', 'churchpew_jetpack_setup' );
+add_action( 'after_setup_theme', 'volcano_jetpack_setup' );

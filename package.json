@@ -12,8 +12,8 @@
     "gulp-uglify": "^1.2.0",
     "foundation-sites": "^6.0.3"
   },
-  "name": "churchpew",
-  "description": "ChurchPew - Zeek Starter Theme ===",
+  "name": "volcano",
+  "description": "Volcano - Zeek Starter Theme ===",
   "version": "0.1.0",
   "main": "gulpfile.js",
   "scripts": {
@@ -21,12 +21,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/australiansteve/churchpew"
+    "url": "https://github.com/australiansteve/volcano"
   },
   "author": "Zeek Interactive",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/australiansteve/churchpew/issues"
+    "url": "https://github.com/australiansteve/volcano/issues"
   },
-  "homepage": "https://github.com/australiansteve/churchpew"
+  "homepage": "https://github.com/australiansteve/volcano"
 }

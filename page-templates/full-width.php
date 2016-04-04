@@ -2,7 +2,7 @@
 /**
  * Template Name: Full width (no sidebar)
  * 
- * @package churchpew
+ * @package volcano
  */
 
 ?>

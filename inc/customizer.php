@@ -1,8 +1,8 @@
 <?php
 /**
- * Volcano Theme Customizer
+ * ChurchPew Theme Customizer
  *
- * @package Volcano
+ * @package ChurchPew
  */
 
 /**
@@ -10,7 +10,7 @@
  *
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
-function volcano_customize_register( $wp_customize ) {
+function churchpew_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 
@@ -21,7 +21,7 @@ function volcano_customize_register( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( 'font_family', array(
-			'label'    => __( 'Header & footer font', 'volcano' ),
+			'label'    => __( 'Header & footer font', 'churchpew' ),
 			'section'  => 'colors',
 			'settings' => 'font_family',
 			'type'     => 'select',
@@ -41,7 +41,7 @@ function volcano_customize_register( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'header_background_color', array(
-		'label'        => __( 'Header colour', 'volcano' ),
+		'label'        => __( 'Header colour', 'churchpew' ),
 		'section'    => 'colors',
 		'settings'   => 'header_background_color',
 	) ) );
@@ -55,7 +55,7 @@ function volcano_customize_register( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'header_text_color', array(
-		'label'        => __( 'Header Text colour', 'volcano' ),
+		'label'        => __( 'Header Text colour', 'churchpew' ),
 		'section'    => 'colors',
 		'settings'   => 'header_text_color',
 	) ) );
@@ -69,7 +69,7 @@ function volcano_customize_register( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'bloglogo', array(
-		'label'        => __( 'Logo', 'volcano' ),
+		'label'        => __( 'Logo', 'churchpew' ),
 		'section'    => 'title_tagline',
 		'settings'   => 'bloglogo',
 	) ) );
@@ -77,9 +77,9 @@ function volcano_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'bloglogo' )->transport = 'postMessage';
 	
 	/* START - WooCommerce customizations */
-	$wp_customize->add_section( 'volcano_woocommerce' , array(
-	    'title'      	=> __('WooCommerce customizations','volcano'),
-	    'description'	=> __('If the WooCommerce plugin is installed, use this section to override some aspects of the default styling.','volcano'),
+	$wp_customize->add_section( 'churchpew_woocommerce' , array(
+	    'title'      	=> __('WooCommerce customizations','churchpew'),
+	    'description'	=> __('If the WooCommerce plugin is installed, use this section to override some aspects of the default styling.','churchpew'),
 	    'priority'   	=> 120,
 	) );
 
@@ -89,8 +89,8 @@ function volcano_customize_register( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'wc_color_1', array(
-		'label'        => __( 'WooCommerce color 1', 'volcano' ),
-		'section'    => 'volcano_woocommerce',
+		'label'        => __( 'WooCommerce color 1', 'churchpew' ),
+		'section'    => 'churchpew_woocommerce',
 		'settings'   => 'wc_color_1',
 	) ) );
 
@@ -102,8 +102,8 @@ function volcano_customize_register( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'wc_color_2', array(
-		'label'        => __( 'WooCommerce color 2', 'volcano' ),
-		'section'    => 'volcano_woocommerce',
+		'label'        => __( 'WooCommerce color 2', 'churchpew' ),
+		'section'    => 'churchpew_woocommerce',
 		'settings'   => 'wc_color_2',
 	) ) );
 
@@ -115,9 +115,9 @@ function volcano_customize_register( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'wc_color_3', array(
-		'label'        => __( 'WooCommerce color 3', 'volcano' ),
+		'label'        => __( 'WooCommerce color 3', 'churchpew' ),
 		'description'    => 'Info messages etc.',
-		'section'    => 'volcano_woocommerce',
+		'section'    => 'churchpew_woocommerce',
 		'settings'   => 'wc_color_3',
 	) ) );
 
@@ -126,27 +126,27 @@ function volcano_customize_register( $wp_customize ) {
 	/* END - WooCommerce customizations */
 
 }
-add_action( 'customize_register', 'volcano_customize_register' );
+add_action( 'customize_register', 'churchpew_customize_register' );
 
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
-function volcano_customize_preview_js() {// Localize the script with new data
+function churchpew_customize_preview_js() {// Localize the script with new data
 
-	wp_register_script( 'volcano_customizer', get_template_directory_uri().'/inc/js/customizer.js', array( 'customize-preview' ), '20130508', true );
+	wp_register_script( 'churchpew_customizer', get_template_directory_uri().'/inc/js/customizer.js', array( 'customize-preview' ), '20130508', true );
 
 	$translation_array = array( 
 		'siteurl' => get_option('siteurl'), 
 		'blogname' => get_option('blogname') 
 	);
 
-	wp_localize_script( 'volcano_customizer', 'WPVARS', $translation_array );
+	wp_localize_script( 'churchpew_customizer', 'WPVARS', $translation_array );
 
-	wp_enqueue_script( 'volcano_customizer' );
+	wp_enqueue_script( 'churchpew_customizer' );
 }
-add_action( 'customize_preview_init', 'volcano_customize_preview_js' );
+add_action( 'customize_preview_init', 'churchpew_customize_preview_js' );
 
-function volcano_customize_css()
+function churchpew_customize_css()
 {
     ?>
         <style type="text/css">
@@ -231,4 +231,4 @@ function volcano_customize_css()
         </style>
     <?php
 }
-add_action( 'wp_head', 'volcano_customize_css');
+add_action( 'wp_head', 'churchpew_customize_css');

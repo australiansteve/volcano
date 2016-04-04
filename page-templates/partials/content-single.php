@@ -1,6 +1,6 @@
 <?php
 /**
- * @package Volcano
+ * @package ChurchPew
  */
 ?>
 
@@ -13,13 +13,13 @@
 		<?php the_content(); ?>
 		<?php
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'volcano' ),
+				'before' => '<div class="page-links">' . __( 'Pages:', 'churchpew' ),
 				'after'  => '</div>',
 			) );
 		?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php volcano_entry_footer(); ?>
+		<?php churchpew_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

@@ -1,8 +1,8 @@
 <?php
 /**
- * Volcano functions and definitions
+ * ChurchPew functions and definitions
  *
- * @package Volcano
+ * @package ChurchPew
  */
 
 /**
@@ -12,7 +12,7 @@ if ( ! isset( $content_width ) ) {
 	$content_width = 640; /* pixels */
 }
 
-if ( ! function_exists( 'volcano_setup' ) ) :
+if ( ! function_exists( 'churchpew_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -20,15 +20,15 @@ if ( ! function_exists( 'volcano_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function volcano_setup() {
+function churchpew_setup() {
 
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on Volcano, use a find and replace
-	 * to change 'volcano' to the name of your theme in all the template files
+	 * If you're building a theme based on ChurchPew, use a find and replace
+	 * to change 'churchpew' to the name of your theme in all the template files
 	 */
-	load_theme_textdomain( 'volcano', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'churchpew', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -50,10 +50,10 @@ function volcano_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', 'volcano' ),
-      	'secondary' => __( 'Secondary Menu', 'volcano' ),
-      	'tertiary' => __( 'Tertiary Menu', 'volcano' ),
-      	'quatro' => __( 'Fourth Menu', 'volcano' ),
+		'primary' => __( 'Primary Menu', 'churchpew' ),
+      	'secondary' => __( 'Secondary Menu', 'churchpew' ),
+      	'tertiary' => __( 'Tertiary Menu', 'churchpew' ),
+      	'quatro' => __( 'Fourth Menu', 'churchpew' ),
 	) );
 
 	/*
@@ -73,22 +73,22 @@ function volcano_setup() {
 	) );
 
 	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'volcano_custom_background_args', array(
+	add_theme_support( 'custom-background', apply_filters( 'churchpew_custom_background_args', array(
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
 }
-endif; // volcano_setup
-add_action( 'after_setup_theme', 'volcano_setup' );
+endif; // churchpew_setup
+add_action( 'after_setup_theme', 'churchpew_setup' );
 
 /**
  * Register widget area.
  *
  * @link http://codex.wordpress.org/Function_Reference/register_sidebar
  */
-function volcano_widgets_init() {
+function churchpew_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Sidebar 1', 'volcano' ),
+		'name'          => __( 'Sidebar 1', 'churchpew' ),
 		'id'            => 'sidebar-1',
 		'description'   => 'Used on the front page, closest to the bottom of the page inside the page content',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -98,54 +98,54 @@ function volcano_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => __( 'Footer', 'volcano' ),
+		'name'          => __( 'Footer', 'churchpew' ),
 		'id'            => 'footer-sidebar',
 		'description'   => '',
-		'before_widget' => '<div class="volcano-footer">',
+		'before_widget' => '<div class="churchpew-footer">',
 		'after_widget'  => '</div>',
 		'before_title'  => '',
 		'after_title'   => '',
 	) );
 
 	register_sidebar( array(
-		'name'          => __( 'Slider', 'volcano' ),
+		'name'          => __( 'Slider', 'churchpew' ),
 		'id'            => 'slider-sidebar',
 		'description'   => '',
-		'before_widget' => '<div class="volcano-slider">',
+		'before_widget' => '<div class="churchpew-slider">',
 		'after_widget'  => '</div>',
 		'before_title'  => '',
 		'after_title'   => '',
 	) );
 
 	register_sidebar( array(
-		'name'          => __( 'Blog sidebar', 'volcano' ),
+		'name'          => __( 'Blog sidebar', 'churchpew' ),
 		'id'            => 'blog-sidebar',
 		'description'   => 'Used on the side of blog & archive pages',
-		'before_widget' => '<div class="volcano-blog-sidebar">',
+		'before_widget' => '<div class="churchpew-blog-sidebar">',
 		'after_widget'  => '</div>',
 		'before_title'  => '',
 		'after_title'   => '',
 	) );
 }
-add_action( 'widgets_init', 'volcano_widgets_init' );
+add_action( 'widgets_init', 'churchpew_widgets_init' );
 
 
 /**
  * Enqueue styles.
  */
-if ( !function_exists( 'volcano_styles' ) ) :
+if ( !function_exists( 'churchpew_styles' ) ) :
 
-	function volcano_styles() {
+	function churchpew_styles() {
 		// Enqueue our stylesheets
 
-		wp_enqueue_style( 'volcano_web_fonts', get_stylesheet_directory_uri() . '/assets/dist/css/web-fonts.css', '', '1.0' );
-		wp_enqueue_style( 'volcano_styles', get_stylesheet_directory_uri() . '/assets/dist/css/app.css', '', '1.1.0' );
+		wp_enqueue_style( 'churchpew_web_fonts', get_stylesheet_directory_uri() . '/assets/dist/css/web-fonts.css', '', '1.0' );
+		wp_enqueue_style( 'churchpew_styles', get_stylesheet_directory_uri() . '/assets/dist/css/app.css', '', '1.1.0' );
 		wp_enqueue_style( 'fontawesome_styles', get_stylesheet_directory_uri() . '/assets/dist/css/font-awesome.css', '', '9' );
 		wp_enqueue_style( 'home_styles', get_stylesheet_directory_uri() . '/style.css', '', '9' );
 
 	}
 
-add_action( 'wp_enqueue_scripts', 'volcano_styles' );
+add_action( 'wp_enqueue_scripts', 'churchpew_styles' );
 
 endif;
 
@@ -153,7 +153,7 @@ endif;
 /**
  * Enqueue scripts.
  */
-function volcano_scripts() {
+function churchpew_scripts() {
 
 	// Add core Foundation js to footer
 	wp_enqueue_script( 'foundation-js', get_template_directory_uri() . '/node_modules/foundation-sites/dist/foundation.js', array( 'jquery' ), '6.0.3', true );
@@ -162,19 +162,19 @@ function volcano_scripts() {
 	if ( WP_DEBUG ) {
 
 		// Enqueue our full version if in development mode
-		wp_enqueue_script( 'volcano_appjs', get_template_directory_uri() . '/assets/dist/js/app.js', array( 'jquery' ), '1.0.3', true );
+		wp_enqueue_script( 'churchpew_appjs', get_template_directory_uri() . '/assets/dist/js/app.js', array( 'jquery' ), '1.0.3', true );
 
 	} else {
 
 		// Enqueue minified js if in production mode
-		wp_enqueue_script( 'volcano_appjs', get_template_directory_uri() . '/assets/dist/js/app.min.js', array( 'jquery' ), '1.0.3', true );
+		wp_enqueue_script( 'churchpew_appjs', get_template_directory_uri() . '/assets/dist/js/app.min.js', array( 'jquery' ), '1.0.3', true );
 	}
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'volcano_scripts' );
+add_action( 'wp_enqueue_scripts', 'churchpew_scripts' );
 
 
 /**
@@ -199,9 +199,9 @@ require get_template_directory() . '/inc/jetpack.php';
 
 
 
-add_filter( 'wp_nav_menu', 'volcano_nav_menu', 10, 2 );
+add_filter( 'wp_nav_menu', 'churchpew_nav_menu', 10, 2 );
 
-function volcano_nav_menu( $menu ){
+function churchpew_nav_menu( $menu ){
 	$menu = str_replace('current-menu-item', 'current-menu-item active', $menu);
 	return $menu;
 }

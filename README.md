@@ -1,4 +1,4 @@
-#Volcano - Zeek Starter Theme
+#ChurchPew - Zeek Starter Theme
 
 This is the Zeek Starter theme, based on <a href="http://underscores.me/">Underscores</a> and Foundation 6.0.3.
 
